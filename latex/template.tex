@@ -1,0 +1,111 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{phew}
+
+% Page setup
+\geometry{
+    left=1in,
+    right=1in,
+    top=1in,
+    bottom=1in
+}
+
+% Custom colors
+\definecolor{lightgray}{RGB}{245,245,245}
+\definecolor{darkgray}{RGB}{128,128,128}
+\definecolor{purple}{RGB}{128,0,128}
+\definecolor{abscol}{RGB}{250,243,224}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=0.8cm]{logo1.png}} % Replace with your logo
+\fancyhead[R]{\includegraphics[height=0.8cm]{logo2.png}} % Replace with your logo
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+
+% Title formatting
+\titleformat{\section}[block]
+{\large\bfseries}
+{\thesection}{1em}{}
+
+% Custom command for equal contribution
+\newcommand{\equal}[1]{\textsuperscript{*#1}}
+
+% Custom command for affiliations
+\newcommand{\affil}[1]{\textsuperscript{#1}}
+
+
+\begin{document}
+
+% Remove header from first page
+\thispagestyle{empty}
+
+% Logo section at top
+\begin{center}
+\vspace*{-0.5in}
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{figs/scaleml-lab.pdf} % Replace with actual logo path
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\raggedleft
+\includegraphics[width=\textwidth]{figs/paper-logo.pdf} % Replace with actual logo path
+\end{minipage}
+\end{center}
+
+% \vspace{0.5in}
+\hrule
+\vspace{0.3in}
+
+% Title
+\begin{center}
+{\LARGE\bfseries PAPER TITLE: Understanding Advanced Concepts in\\
+Modern Machine Learning Systems}
+\end{center}
+
+% Authors and affiliations
+\begin{center}
+\begin{minipage}{\textwidth}
+\centering
+Author One\equal{1}, Author Two\equal{1}, Author Three\equal{1}, Author Four\equal{1}, Author Five\affil{2},\\
+Author Six\affil{1}, Author Seven\affil{6}, Author Eight\affil{1}, Author Nine\affil{7}, Author Ten\affil{1}, Author Eleven\affil{1},\\
+Author Twelve\affil{1}, Author Thirteen\affil{5}, Author Fourteen\affil{3}, Author Fifteen\affil{3}, Author Sixteen\affil{4}, Author Seventeen\affil{3}, Author Eighteen\affil{1}
+
+\vspace{0.2in}
+
+\small
+\equal{}Equal Contribution\\
+\affil{1}University of Illinois Urbana-Champaign \quad \affil{2}University of Washington \quad \affil{3}Stanford University \quad \affil{4}Microsoft
+\affil{5}New York University \quad \affil{6}University of British Columbia \quad \affil{7}Singapore Management University
+\end{minipage}
+\end{center}
+
+\vspace{0.2in}
+
+% Abstract section
+\begin{tcolorbox}[
+    colback=abscol,
+    colframe=abscol,
+    boxrule=0.5pt,
+    arc=3pt,
+    left=10pt,
+    right=10pt,
+    top=10pt,
+    bottom=10pt
+]
+Let us build beautiful and elegant Large Language Models through \textbf{Reinforcement Learning}!
+
+\textbf{Keywords:} LLM Agents, Multi-turn RL\\
+\textbf{Website:} \url{https://github.com/ScaleML/ScaleML-lab/tree/main}\\
+\textbf{Code/Environments:} \url{https://github.com/ScaleML/ScaleML-lab/tree/main}.
+\end{tcolorbox}
+
+% Main content sections
+\section{Introduction}
+
+Your introduction content goes here. This section should provide background on the problem, motivate the research, and outline the main contributions of the work.
+
+\bibliographystyle{apalike}
+\bibliography{ref}
+
+\end{document}
